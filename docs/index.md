@@ -11,3 +11,4 @@
     * Visual bugs when nesting controls
   * benefits when overriding
     * no freeze when dragging/resizing window.
+* __BETTER__ coding style conventions @see https://docs.microsoft.com/en-us/windows/win32/stg/coding-style-conventions for ref
