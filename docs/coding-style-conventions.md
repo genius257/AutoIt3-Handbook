@@ -3,6 +3,10 @@
 Coding style conventions are used in this sample series to aid clarity and consistency. The "Hungarian" notation conventions are used.  
 They include variable prefix notations that give to variable names a suggestion of the type of the variable.
 
+AutoIt3 does have it's own official coding style convention here: [Best coding practices]().  
+However it is missing some tings, like a few variable type prefixes and not having guidelines to prevent UDF varaible naming conflicts.  
+It is NOT recommended to mix theese coding practices.
+
 This page is based on [MSDN Coding Style Conventions](https://docs.microsoft.com/en-us/windows/win32/stg/coding-style-conventions), modified to AutoIt3 needs.
 
 ## Variables
