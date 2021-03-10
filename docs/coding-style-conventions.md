@@ -5,8 +5,9 @@ They include variable prefix notations that give to variable names a suggestion 
 
 This page is based on [MSDN Coding Style Conventions](https://docs.microsoft.com/en-us/windows/win32/stg/coding-style-conventions), modified to AutoIt3 needs.
 
-The following table lists common variable prefixes.
+## Variables
 
+The following table lists common variable prefixes.
 
 | Prefix | Description                         |
 | :----- | :---------------------------------- |
@@ -32,3 +33,30 @@ The following table lists common variable prefixes.
 | t      | DllStruct                           |
 | tag    | DllStruct structure definition      |
 | v      | Variant                             |
+
+
+These are often combined, as in the following.
+
+| Prefix combination | Description                            |
+| :----------------- | :------------------------------------- |
+| pszMyString        | A pointer to a zero terminated string. |
+| asDays             | An array of strings                    |
+| anArray            | An array of numbers                    |
+
+## Functions
+
+## DllStruct element names
+
+## UDFs
+
+UDFs should try to follow guidelines below to avoid naming conflicts.
+
+### Variables
+
+Global variables in UDFs should use the prefix: `__g_` followed by the UDF "namespace"  
+Example: `$__g_AutoIt3Handbook_sMyString` where `AutoIt3Handbook` reprensents the UDF "namespace"
+
+### Functions
+
+UDF functions should use the prefix `_` followed by the UDF "namespace"  
+Example: `_AutoIt3Handbook_MyFunction()` where `AutoIt3Handbook` reprensents the UDF "namespace"
