@@ -1,3 +1,10 @@
+# AutoIt3 Handbook
+
+## Language Reference
+* [Basic syntax](language-reference/basic-syntax/index.md)
+* [Types](language-reference/types/index.md)
+* [Variables](language-reference/variables/index.md)
+
 * [ ] Comparing values
   * [ ] type comparison tables
   * [ ] type-juggling
