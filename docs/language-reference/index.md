@@ -20,3 +20,4 @@
 * [Basics](variables/basics.md)
 * [Predefined Variables](variables/predefined-variables.md)
 * [Variable scope](variables/variable-scope.md)
+* [Internal workings](variables/internal-workings.md)

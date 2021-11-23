@@ -1,9 +1,18 @@
 # AutoIt3 Handbook
 
-## Language Reference
+## [Language Reference](language-reference/index.md)
 * [Basic syntax](language-reference/basic-syntax/index.md)
 * [Types](language-reference/types/index.md)
 * [Variables](language-reference/variables/index.md)
+
+## [Function Reference](function-reference/index.md)
+* [Variable and Type Related Extensions](function-reference/variable-and-type-related-extensions.md)
+
+## [Under the hood](under-the-hood/index.md)
+* [Runtime Lifecycle](under-the-hood/runtime-lifecycle.md)
+
+## [Appendices](appendices/index.md)
+* [coding style conventions](appendices/coding-style-conventions.md)
 
 * [ ] Comparing values
   * [ ] type comparison tables
