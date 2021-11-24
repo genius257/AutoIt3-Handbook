@@ -1,0 +1,59 @@
+---
+---
+
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: #212324;
+      color: #dedcdb;
+    }
+  
+    aside>div {
+        background-color: #5B94C5;
+    }
+    
+    nav {
+        background-color: #395E7E;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+      background-color: #dedcdb;
+      color: #212324;
+  }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100vw;
+    height: 100vh;
+    align-items: stretch;
+}
+
+aside {
+    width: 200px;
+    flex: 0 0 content;
+    display:flex;
+    flex-direction: column;
+}
+
+aside>div {
+    padding: 10px;
+}
+
+nav {
+    padding: 10px;
+    flex: 1 0;
+}
+
+main {
+    flex: 1;
+    padding: 30px 50px;
+}
