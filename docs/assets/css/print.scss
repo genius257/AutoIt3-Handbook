@@ -78,6 +78,7 @@ header h1 {
   line-height: 1.2;
   color: #303030;
   letter-spacing: -1px;
+  text-align: center;
 }
 
 header h2 {
@@ -240,3 +241,13 @@ footer a {
 .clearfix {display: inline-block;}
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
+
+/* non content generic css rules below */
+
+.page-wrapper {
+  padding: 1cm;
+}
+
+aside {
+  display: none;
+}
