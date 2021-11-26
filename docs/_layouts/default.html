@@ -26,6 +26,7 @@
                 <nav>
                     <!-- {% include toc.html html=content %} -->
                     <ul>
+                    {{site.baseurl}}
                     {% assign page_url = page.url %}
                     {% assign html_pages = site.html_pages | sort: 'url' %}
                     {% for page in html_pages %}
