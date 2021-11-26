@@ -31,7 +31,7 @@
                     {% assign html_pages = site.html_pages | sort: 'url' %}
                     {% for page in html_pages %}
                         {% if page.title != nil %}
-                        <li><a href="{{ page.url | relative_url }}">{{ page.title | downcase }}</a> {{ page.excerpt }}</li>
+                        <li>{{ page.url }}<a href="{{ page.url | relative_url }}">{{ page.title | downcase }}</a> {{ page.excerpt }}</li>
                         {% endif %}
                     {% endfor %}
                     </ul>
