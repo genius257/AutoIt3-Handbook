@@ -16,16 +16,21 @@
     }
 
     a {
-        color: #508aaa;
+        color: #A3D8F5;
         text-decoration: none;
+        outline: none;
     }
 
     a:visited {
-        color: #2f5265;
+        color: #859FAD;
     }
 
-    a:hover {
-        color: #71a2bc;
+    a:hover, a:focus, a:focus-visible {
+        color: #D1EBFA;
+    }
+
+    a:focus, a:focus-visible {
+        text-decoration: underline;
     }
 }
 
