@@ -35,7 +35,7 @@
                             {% assign page_level = page.url | split:"/" | size | minus: 1 %}
                             {% if page_level > previous_page_level %}
                                 <ul>
-                            {% elsif page_level > previous_page_level %}
+                            {% elsif page_level < previous_page_level %}
                                 </ul>
                             {% endif %}
                             <li>{{ page.url }}<br/>{{ page.url | split:"/" | size | minus: 1 }}<br /><a href="{{ page.url | relative_url }}">{{ page.title | downcase }}</a> {{ page.excerpt }}</li>
