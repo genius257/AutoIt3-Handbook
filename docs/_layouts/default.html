@@ -28,7 +28,6 @@
                     <ul>
                     {% assign page_url = page.url %}
                     {% for page in site.html_pages %}
-                        <!-- {% if page.title != nil and page.dir contains "/cli-commands/" and page.name != "index.md" %} -->
                         {% if page.title != nil %}
                         <li><a href="{{ page.url | relative_url }}">{{ page.title | downcase }}</a> {{ page.excerpt }}</li>
                         {% endif %}
