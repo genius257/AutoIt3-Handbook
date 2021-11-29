@@ -6,14 +6,14 @@ Comments are sections of text within AutoIt3 code that are ignored at runtime.
 
 Single line comments in AutoIt3 uses a semicolon to indicate the start of the comment and everything preceding the symbol on the same line is ignored by the interpreter. (If not within a string)
 
-```au3
+```autoit
 ; This is a stand alone single line comment
 MsgBox(0, "Title", "; Message"); This is a single line comment, following a statement
 ```
 
 Single line comments are also allowed on expressions using [line continuation](./line-continuation.md) like so:
 
-```au3
+```autoit
 MsgBox( _
     "Title" _; This is the title of the message box
     "Message"; This is the message of the message box
@@ -32,7 +32,7 @@ Mixing the type of directives for starting and closing is allowed, meaning you c
 
 An important note is that comment rules within multi line comment blocks apply, meaning multiline comments are possible, and single line comments can disable a multi line directive.
 
-```au3
+```autoit
 #cs
     #comments-start
         The line below does not end the nested comment block, due to the preceding semicolon.
@@ -51,7 +51,7 @@ It is also possible to make comments, using the preprocessor directive line form
 
 The preprocessor directive cannot precede code on a line, and everythig preceeding the # symbol on the same line is ignored by the interpreter. (If not within a string)
 
-```au3
+```autoit
 # This is a comment, within a preprocessor directive
 MsgBox(0, "Title", "# Message")
 ```
