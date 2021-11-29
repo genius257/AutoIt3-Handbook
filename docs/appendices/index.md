@@ -1,3 +1,15 @@
 # Appendices
 
-* [coding style conventions](coding-style-conventions.md)
+* [History of AutoIt3](history-of-autoit3.md)
+* [Migrating from 3.2.x to 3.3.x]()
+* [Debugging in AutoIt3]()
+* [Configure options]()
+* [script.ini directives]()
+* [Default UDF List/Categorization]()
+* [List of Reserved Words]()
+* [AutoIt3 type comparison tables]()
+* [Coding Style Conventions](coding-style-conventions.md)
+* [About the manual]()
+* [MIT License]()
+* [Index listing]()
+* [Changelog]()
