@@ -15,8 +15,9 @@ Single line comments are also allowed on expressions using [line continuation](.
 
 ```autoit
 MsgBox( _
-    "Title" _; This is the title of the message box
-    "Message"; This is the message of the message box
+	0, _;This is the flag for message box display options
+    "Title", _; This is the title of the message box
+    "Message" _; This is the message of the message box
 )
 ```
 
