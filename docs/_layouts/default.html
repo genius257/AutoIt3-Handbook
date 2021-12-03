@@ -31,13 +31,17 @@
                     {% assign previous_page_level = nil %}
                     {% for page in html_pages %}
                         {% if page.title != nil %}
-                            {% assign page_level = page.url | split:"/" | size | minus: 1 %}
+                            {% assign page_level = page.url | split:"/" | size | minus: 1 | at_least: 0 %}
                             {% if page_level > previous_page_level %}
+                                {% for i in (previous_page_level..page_level) %}
                                 <ul>
+                                {% endfor %}
                             {% elsif page_level < previous_page_level %}
+                                {% for i in (page_level..previous_page_level) %}
                                 </ul>
+                                {% endfor %}
                             {% endif %}
-                            <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+                            <li>level ({{ page_level }}) <a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
                             {% assign previous_page_level = page_level %}
                         {% endif %}
                     {% endfor %}
