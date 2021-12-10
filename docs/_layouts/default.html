@@ -45,9 +45,9 @@
                             {% assign previous_page_level = page_level %}
                         {% endif %}
                     {% endfor %}
-                    {% if previous_page_level != nil %}
+                    {% for i in (page_level..0) %}
                         </ul>
-                    {% endif %}
+                    {% endfor %}
                     </ul>
                 </nav>
             </aside>
