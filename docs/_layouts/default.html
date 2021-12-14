@@ -33,11 +33,13 @@
                         {% if page.title != nil %}
                             {% assign page_level = page.url | split:"/" | size | minus: 1 | at_least: 0 %}
                             {% if page_level > previous_page_level %}
-                                {% for i in (previous_page_level..page_level-1) %}
+                                {% assign x = page_level | minus: 1 %}
+                                {% for i in (previous_page_level..x) %}
                                 {{ i }}<ul>
                                 {% endfor %}
                             {% elsif page_level < previous_page_level %}
-                                {% for i in (page_level..previous_page_level-1) %}
+                                {% assign x = previous_page_level | minus: 1 %}
+                                {% for i in (page_level..x) %}
                                 {{ i }}</ul>
                                 {% endfor %}
                             {% endif %}
@@ -45,7 +47,8 @@
                             {% assign previous_page_level = page_level %}
                         {% endif %}
                     {% endfor %}
-                    {% for i in (0..page_level-1) %}
+                    {% assign x = page_level | minus: 1 %}
+                    {% for i in (0..x) %}
                         </ul>
                     {% endfor %}
                     </ul>
