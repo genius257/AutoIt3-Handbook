@@ -35,15 +35,15 @@
                             {% if page_level > previous_page_level %}
                                 {% assign x = page_level | minus: 1 %}
                                 {% for i in (previous_page_level..x) %}
-                                {{ i }}<ul>
+                                <ul>
                                 {% endfor %}
                             {% elsif page_level < previous_page_level %}
                                 {% assign x = previous_page_level | minus: 1 %}
                                 {% for i in (page_level..x) %}
-                                {{ i }}</ul>
+                                </ul>
                                 {% endfor %}
                             {% endif %}
-                            <li>level ({{ page_level }}) <a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+                            <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
                             {% assign previous_page_level = page_level %}
                         {% endif %}
                     {% endfor %}
