@@ -42,8 +42,20 @@ layout: default
           Object.keys(metadata[term]).forEach(function (fieldName) {
             var positions = metadata[term][fieldName].position.reverse();
             positions.forEach(function (position) {
-              range.setStart(pre.firstChild, position[0]);
-              range.setEnd(pre.firstChild, position[0] + position[1]);
+              var textNode;
+              switch (fieldName) {
+                case 'title':
+                  textNode = h3.firstChild;
+                  break;
+                case 'content':
+                  textNode = pre.firstChild;
+                  break;
+                default:
+                  return;
+                  break;
+              }
+              range.setStart(textNode, position[0]);
+              range.setEnd(textNode, position[0] + position[1]);
               range.surroundContents(document.createElement('mark'));
             });
           });
