@@ -50,20 +50,20 @@
         this.field('author');
         this.field('category');
         this.field('content');
+
+        for (var key in store) { // Add the data to lunr
+          this.add({
+            'id': key,
+            'title': store[key].title,
+            'author': store[key].author,
+            'category': store[key].category,
+            'content': store[key].content
+          });
+        }
       });
 
-      for (var key in store) { // Add the data to lunr
-        idx.add({
-          'id': key,
-          'title': store[key].title,
-          'author': store[key].author,
-          'category': store[key].category,
-          'content': store[key].content
-        });
-
-        var results = idx.search(searchTerm); // Get lunr to perform a search
-        displaySearchResults(results, store); // We'll write this in the next section
-      }
+      var results = idx.search(searchTerm); // Get lunr to perform a search
+      displaySearchResults(results, store); // We'll write this in the next section
     }
   });
 })();
