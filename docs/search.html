@@ -43,7 +43,7 @@ layout: default
             var positions = metadata[term][fieldName].position;
             positions.forEach(function (position) {
               range.setStart(pre.firstChild, position[0]);
-              range.setEnd(pre.firstChild, position[1]);
+              range.setEnd(pre.firstChild, position[0] + position[1]);
               range.surroundContents(document.createElement('mark'));
             });
           });
