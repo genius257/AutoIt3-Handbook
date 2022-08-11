@@ -21,7 +21,9 @@
                         <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="logo" />
                     </a>
                     <br />
-                    <input type="text" />
+                    <form action="{{ '/search.html' | relative_url }}" method="get">
+                        <input type="text" name="query"/>
+                    </form>
                 </div>
                 <nav>
                     <!-- {% include toc.html html=content %} -->
