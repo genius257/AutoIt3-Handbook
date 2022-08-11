@@ -16,15 +16,32 @@ layout: default
     var searchResults = document.getElementById('search-results');
 
     if (results.length) { // Are there any results?
-      var appendString = '';
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-        appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        var h3 = document.createElement('h3');
+        var pre = document.createElement('pre');
+
+        searchResults.appendChild(li);
+        li.appendChild(a);
+        li.appendChild(pre);
+        a.appendChild(h3);
+
+        a.href = item.url;
+        h3.innerText = item.title;
+        pre.innerText = item.content;
+
+        console.log(results[i]);
+        /*
+        var range = document.createRange();
+        range.setStart(pre, rangeStart);
+        range.setEnd(pre, rangeEnd);
+        */
       }
 
-      searchResults.innerHTML = appendString;
+      //searchResults.innerHTML = appendString;
     } else {
       searchResults.innerHTML = '<li>No results found</li>';
     }
