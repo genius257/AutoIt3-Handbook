@@ -7,7 +7,8 @@
             "title": "{{ page.title | xml_escape }}",
             "author": "{{ page.author | xml_escape }}",
             "category": "{{ page.category | xml_escape }}",
-            "content": {{ page.content | strip_html | strip_newlines | jsonify }},
+            "content_clean": {{ page.content | strip_html | strip_newlines | jsonify }},
+            "content": {{ page.content | jsonify }},
             "url": "{{ page.url | relative_url | xml_escape }}"
         }
         {% unless forloop.last %},{% endunless %}
