@@ -40,7 +40,7 @@ layout: default
         var metadata = result.matchData.metadata;
         Object.keys(metadata).forEach(function (term) {
           Object.keys(metadata[term]).forEach(function (fieldName) {
-            var positions = metadata[term][fieldName].position;
+            var positions = metadata[term][fieldName].position.reverse();
             positions.forEach(function (position) {
               range.setStart(pre.firstChild, position[0]);
               range.setEnd(pre.firstChild, position[0] + position[1]);
