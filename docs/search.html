@@ -31,7 +31,7 @@ layout: default
         a.appendChild(h3);
 
         a.href = item.url;
-        h3.innerText = item.title;
+        h3.textContent = item.title;
         pre.innerText = item.content;
 
         console.log(result);
@@ -42,8 +42,8 @@ layout: default
           Object.keys(metadata[term]).forEach(function (fieldName) {
             var positions = metadata[term][fieldName].position;
             positions.forEach(function (position) {
-              range.setStart(pre, position[0]);
-              range.setEnd(pre, position[1]);
+              range.setStart(pre.firstChild, position[0]);
+              range.setEnd(pre.firstChild, position[1]);
               range.surroundContents(document.createElement('mark'));
             });
           });
