@@ -76,7 +76,7 @@ nav ul {
     list-style: none;
 }
 
-nav ul li::after {
+nav ul li::before {
     content: "\2022";
     color: inherit;
     font-weight: bold;
@@ -85,7 +85,7 @@ nav ul li::after {
     margin-left: -1em;
 }
 
-nav ul li.active::after {
+nav ul li.active::before {
     color: orangered;
 }
 
