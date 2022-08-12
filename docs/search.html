@@ -54,9 +54,13 @@ layout: default
                   return;
                   break;
               }
-              range.setStart(textNode, position[0]);
-              range.setEnd(textNode, position[0] + position[1]);
-              range.surroundContents(document.createElement('mark'));
+              try {
+                range.setStart(textNode, position[0]);
+                range.setEnd(textNode, position[0] + position[1]);
+                range.surroundContents(document.createElement('mark'));
+              } catch (error) {
+                console.error(error);
+              }
             });
           });
         });
