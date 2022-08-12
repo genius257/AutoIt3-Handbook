@@ -89,8 +89,8 @@ layout: default
       var idx = lunr(function () {
         // this.field('id');
         this.field('title', { boost: 10 });
-        this.field('author');
-        this.field('category');
+        // this.field('author');
+        // this.field('category');
         this.field('content');
 
         this.metadataWhitelist = ['position'];
