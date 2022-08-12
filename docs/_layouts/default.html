@@ -55,6 +55,9 @@
                     {% endfor %}
                     </ul>
                 </nav>
+                <script>
+                    document.querySelectorAll('nav a').forEach((a) => { if (a.href === window.location.href) { a.parentElement.classList.add('active'); } })
+                </script>
             </aside>
             <main>
                 {{ content }}
