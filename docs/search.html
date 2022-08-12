@@ -34,8 +34,6 @@ layout: default
         h3.textContent = item.title;
         pre.textContent = item.content;
 
-        console.log(result);
-
         var range = document.createRange();
         var metadata = result.matchData.metadata;
         Object.keys(metadata).forEach(function (term) {
