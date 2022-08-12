@@ -73,7 +73,20 @@ nav {
 
 nav ul {
     padding-left: 20px;
-    list-style: disc;
+    list-style: none;
+}
+
+nav ul li::after {
+    content: "\2022";
+    color: inherit;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+nav ul li.active::after {
+    color: orangered;
 }
 
 main {
