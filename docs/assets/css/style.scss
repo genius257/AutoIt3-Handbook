@@ -55,6 +55,15 @@ html, body {
     align-items: stretch;
 }
 
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#breadcrumbs {
+    flex: 0 0;
+}
+
 aside {
     --width: 200px;
     flex: 0 0 min-content;
