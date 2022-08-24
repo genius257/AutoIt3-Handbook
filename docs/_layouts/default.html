@@ -67,12 +67,14 @@
                     document.querySelectorAll('nav a').forEach((a) => { if (a.href === window.location.href) { a.parentElement.classList.add('active'); } })
                 </script>
             </aside>
-            <main>
+            <div class="content-wrapper">
                 <nav>
                     {% include breadcrumbs.html %}
                 </nav>
-                {{ content }}
-            </main>
+                <main>
+                    {{ content }}
+                </main>
+            </div>
         </div>
     </body>
 </html>
