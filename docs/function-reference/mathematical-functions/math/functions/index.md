@@ -1,4 +1,4 @@
 # Math functions
 
-* [Abs](functions/abs.md) — Absolute value
-* [ACos](functions/acos.md)
+* [Abs](abs.md) — Absolute value
+* [ACos](acos.md) — Arc cosine
